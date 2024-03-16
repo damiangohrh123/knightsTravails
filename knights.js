@@ -111,6 +111,34 @@ class Knight {
   }
 }
 
+class UI {
+  constructor() {
+    this.rows = 8;
+    this.cols = 8;
+    this.chessBoardContainer = document.querySelector(".chessboard");
+  }
+
+  buildChessBoard() {
+    for (let i = 0; i < this.rows; i++) {
+      const row = document.createElement("div");
+      row.classList.add("chessboardRow");
+
+      for (let j = 0; j < this.cols; j++) {
+        const cell = document.createElement("div");
+        cell.classList.add("chessboardCell");
+
+        // Add alternating colors to simulate a chessboard pattern
+        if ((i + j) % 2 === 0) {
+          cell.classList.add('light-square');
+        } else {
+            cell.classList.add('dark-square');
+        }
+
+      }
+    }
+  }
+}
+
 const chessBoard = new Graph;
 const knight = new Knight(chessBoard.adjList);
 console.log(knight.knightMoves([3, 3], [1, 5]));
