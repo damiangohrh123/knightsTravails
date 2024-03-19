@@ -1,0 +1,70 @@
+@font-face {
+  font-family: latoThin;
+  src: url("./Lato-Thin.woff") format("woff"),
+}
+
+@font-face {
+  font-family: latoReg;
+  src: url("./Lato-Regular.woff") format("woff"),
+}
+
+body {
+  font-family: latoThin, Arial, Helvetica, sans-serif;
+
+  padding: 0px 50px;
+  margin: 0;
+
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+
+.title {
+  padding: 0px;
+}
+
+.knightJpg {
+  padding: 50px;
+  width: 200px;
+  height: 200px;
+}
+
+.instructions {
+  font-family: latoReg, Arial, Helvetica, sans-serif;
+}
+
+.chessboard {
+  padding: 50px;
+
+  display: grid;
+  grid-template-columns: repeat(8, 80px);
+  grid-template-rows: repeat(8, 80px);
+}
+
+.chessboardSquare {
+  font-family: latoReg, Arial, Helvetica, sans-serif;
+  display: flex;
+}
+
+.squareWhite {
+  background-color: rgb(224, 240, 181); 
+}
+
+.squareBlack {
+  background-color: #80c958;
+}
+
+.movementSquare {
+  background-color: #dac690; 
+}
+
+.knightContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.knightImg {
+  width: 70px;
+  height: 70px;
+}
